@@ -86,11 +86,14 @@ const orderModel =  {
         },
         getOrderListFail(state, payload) {
             return Object.assign({}, state, {
-                orderList: [],
                 errorMessage: payload
             });
         },
-
+        clearErrorMessage(state) {
+            return Object.assign({}, state, {
+                errorMessage: null
+            });
+        }
     },
 };
 
